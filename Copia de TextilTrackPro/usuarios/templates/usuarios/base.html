@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}TextilTrack{% endblock %}</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'usuarios/estilos.css' %}">
+</head>
+<body>
+  <header>
+    <h1>TextilTrack</h1>
+    <nav>
+      <a href="/">Inicio</a>
+      {% if user.is_authenticated %}
+        <a href="/logout/">Cerrar sesión</a>
+      {% else %}
+        <a href="/login/">Iniciar sesión</a>
+        <a href="/registro/">Registrarse</a>
+      {% endif %}
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer>
+    <p>© 2025 TextilTrack — Gestión De Inventario Textil </p>
+  </footer>
+</body>
+</html>

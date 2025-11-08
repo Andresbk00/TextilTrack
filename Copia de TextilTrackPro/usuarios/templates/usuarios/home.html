@@ -1,0 +1,20 @@
+{% extends 'usuarios/base.html' %}
+{% block title %}Inicio | TextilTrack{% endblock %}
+
+{% block content %}
+<div class="contenedor">
+  <h2>Bienvenido a TextilTrack</h2>
+  {% if user.is_authenticated %}
+    <p>Hola, {{ user.nombre }} 👋</p>
+    {% if user.rol == "administrador" %}
+      <a href="/panel_admin/" class="btn">Ir al Panel de Administración</a>
+    {% elif user.rol == "vendedor" %}
+      <a href="/panel_vendedor/" class="btn">Ir al Panel de Ventas</a>
+    {% elif user.rol == "auxiliar" %}
+      <a href="/panel_aux/" class="btn">Ir al Panel de Inventario</a>
+    {% endif %}
+  {% else %}
+    <p>Por favor <a href="/login/">inicia sesión</a> o <a href="/registro/">regístrate</a> para continuar.</p>
+  {% endif %}
+</div>
+{% endblock %}

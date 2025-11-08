@@ -1,0 +1,13 @@
+{% extends 'usuarios/base.html' %}
+{% block title %}Panel del Vendedor | TextilTrack{% endblock %}
+
+{% block content %}
+<div class="panel">
+  <h2>Panel del Vendedor</h2>
+  <p>Hola, {{ user.nombre }} {{ user.apellido }} 👋</p>
+  <ul>
+    <li><a href="/inventario/">Ver Productos</a></li>
+    <li><a href="#">Registrar Venta</a></li>
+  </ul>
+</div>
+{% endblock %}

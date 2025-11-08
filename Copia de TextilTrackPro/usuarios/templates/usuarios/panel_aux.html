@@ -1,0 +1,13 @@
+{% extends 'usuarios/base.html' %}
+{% block title %}Panel del Auxiliar | TextilTrack{% endblock %}
+
+{% block content %}
+<div class="panel">
+  <h2>Panel del Auxiliar de Inventario</h2>
+  <p>Hola, {{ user.nombre }} {{ user.apellido }} 👋</p>
+  <ul>
+    <li><a href="/inventario/">Actualizar Inventario</a></li>
+    <li><a href="#">Registrar Movimiento</a></li>
+  </ul>
+</div>
+{% endblock %}

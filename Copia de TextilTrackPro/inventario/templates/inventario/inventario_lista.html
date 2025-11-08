@@ -1,0 +1,26 @@
+{% extends 'usuarios/base.html' %}
+{% block title %}Inventario | TextilTrack{% endblock %}
+
+{% block content %}
+<h2>Lista de Productos</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Producto</th>
+      <th>Categoría</th>
+      <th>Cantidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for producto in productos %}
+    <tr>
+      <td>{{ producto.nombre }}</td>
+      <td>{{ producto.categoria.nombre }}</td>
+      <td>{{ producto.cantidad }}</td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="3">No hay productos registrados.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

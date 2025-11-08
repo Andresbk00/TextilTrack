@@ -1,0 +1,70 @@
+{% extends 'usuarios/base.html' %}
+{% load static %}
+{% block title %}Panel del Administrador | TextilTrack{% endblock %}
+
+{% block content %}
+<div class="admin-container">
+  <h1>Panel del Administrador</h1>
+
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <div class="table-container">
+    <table class="tabla-usuarios">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Rol</th>
+          <th>Aprobado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for usuario in usuarios %}
+          <tr>
+            <td>{{ usuario.id }}</td>
+            <td>{{ usuario.first_name }} {{ usuario.last_name }}</td>
+            <td>{{ usuario.email }}</td>
+            <td>{{ usuario.rol|title }}</td>
+            <td>
+              {% if usuario.aprobado %}
+                ✅ Aprobado
+              {% else %}
+                ❌ Pendiente
+              {% endif %}
+            </td>
+            <td>
+              {% if not usuario.aprobado %}
+              <form method="POST" action="{% url 'aprobar_usuario' usuario.id %}" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" class="btn-aprobar">Aprobar</button>
+              </form>
+              {% endif %}
+
+              <form method="POST" action="{% url 'eliminar_usuario' usuario.id %}" style="display:inline;">
+                {% csrf_token %}
+                <button type="submit" class="btn-eliminar">Eliminar</button>
+              </form>
+            </td>
+          </tr>
+        {% empty %}
+          <tr>
+            <td colspan="6" style="text-align:center;">No hay usuarios registrados.</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="logout-container">
+    <a href="{% url 'logout' %}" class="btn-salir">Cerrar sesión</a>
+  </div>
+</div>
+{% endblock %}

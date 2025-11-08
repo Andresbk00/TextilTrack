@@ -1,0 +1,189 @@
+/* ==== PANEL ADMIN ==== */
+.admin-container {
+  width: 90%;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.admin-container h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-usuarios th, .tabla-usuarios td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.tabla-usuarios th {
+  background: #0059b3;
+  color: white;
+}
+
+.btn-aceptar {
+  background: #28a745;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-eliminar {
+  background: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-aceptar:hover {
+  background: #218838;
+}
+
+.btn-eliminar:hover {
+  background: #c82333;
+}
+
+.btn-salir {
+  display: inline-block;
+  margin-top: 20px;
+  background: #333;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-salir:hover {
+  background: #555;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header, nav, footer {
+  background-color: #3f7ae1;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+form {
+  width: 400px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: #2980b9;
+}
+
+
+.admin-container {
+  width: 90%;
+  margin: 50px auto;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-usuarios th, .tabla-usuarios td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.tabla-usuarios th {
+  background-color: #222;
+  color: white;
+}
+
+.btn-aprobar {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-eliminar {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-aprobar:hover {
+  background-color: #218838;
+}
+
+.btn-eliminar:hover {
+  background-color: #c82333;
+}
+
+.btn-salir {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 10px 20px;
+  background-color: #444;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.btn-salir:hover {
+  background-color: #222;
+}
